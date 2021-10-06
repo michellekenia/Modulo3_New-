@@ -18,6 +18,10 @@ public class Imobiliaria {
         this.listaDeImoveis = listaDeImoveis;
     }
 
+    public void adicionarImovel(Imovel novoImovel) {
+        listaDeImoveis. add(novoImovel);
+    }
+
     @Override
     public String toString() {
         StringBuilder retorno = new StringBuilder();
