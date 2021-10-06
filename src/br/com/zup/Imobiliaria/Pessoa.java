@@ -1,5 +1,10 @@
 package br.com.zup.Imobiliaria;
 
+/*
+A classe pessoa será uma classe base para a funcionários e moradores,
+já que ambas tem nome e CPF.
+ */
+
 public class Pessoa {
 
     private String nome;

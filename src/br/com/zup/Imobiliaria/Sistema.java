@@ -1,6 +1,10 @@
 package br.com.zup.Imobiliaria;
 
 import java.util.Scanner;
+/*
+É na classe sistema onde tudo vai ser estabelecido para depois ser apenas executado no main.
+Todas as classes serão conectadas, e métodos criados para que o programa cumpra a função estabelecida.
+ */
 
 public class Sistema {
     private static Scanner capturarDados(String mensagem) {
