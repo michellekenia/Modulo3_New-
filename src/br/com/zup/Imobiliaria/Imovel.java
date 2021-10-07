@@ -47,6 +47,9 @@ public class Imovel {
         this.listaDeMoradores = listaDeMoradores;
     }
 
+    public void adicionarMorador(Morador novoMorador) {
+        listaDeMoradores. add(novoMorador);
+
     @Override
     public String toString() {
         StringBuilder retorno = new StringBuilder();
