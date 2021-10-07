@@ -48,7 +48,8 @@ public class Imovel {
     }
 
     public void adicionarMorador(Morador novoMorador) {
-        listaDeMoradores. add(novoMorador);
+        listaDeMoradores.add(novoMorador);
+    }
 
     @Override
     public String toString() {
