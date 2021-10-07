@@ -21,7 +21,7 @@ public class Funcionario extends Pessoa {
     public String toString() {
         StringBuilder retorno = new StringBuilder();
         retorno.append(super.toString());
-        retorno.append("\n Código do Funcionário :" + codigoFuncionario);
+        retorno.append("\n Código do Funcionário: " + codigoFuncionario);
         return retorno.toString();
     }
 }

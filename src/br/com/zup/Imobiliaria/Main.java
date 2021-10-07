@@ -14,9 +14,9 @@ public class Main {
         while (menu == true) {
 
             System.out.println("VOCÊ ESTÁ NO SISTEMA DA IMOBILIÁRIA SOARES");
-            System.out.println("Digite 1 para cadastrar um imóvel");
-            System.out.println("Digite 2 para exibir a lista de imóveis cadastrados");
-            System.out.println("Digite 3 para sair do sistema");
+            System.out.println("Digite 1 para cadastrar um imóvel. ");
+            System.out.println("Digite 2 para exibir a lista de imóveis cadastrados. ");
+            System.out.println("Digite 3 para sair do sistema. ");
 
             opcaoMenu = leitor.nextInt();
             leitor.nextLine();
@@ -27,7 +27,7 @@ public class Main {
                 String endereco = leitor.nextLine();
 
                 System.out.println("Digite o valor do aluguel: ");
-                double valorAluguel= leitor.nextDouble();
+                double valorAluguel = leitor.nextDouble();
                 leitor.nextLine();
 
                 System.out.println("Digite o nome do funcionário responsável: ");
@@ -47,10 +47,14 @@ public class Main {
 
                 System.out.println("Quantos moradores serão cadastrados?");
                 int quantidaDeMoradores = leitor.nextInt();
+                leitor.nextLine();
 
                 if (quantidaDeMoradores == 0) {
                     System.out.println("Você finalizou o cadastro de imóveis.");
-                    return;
+                    System.out.println();
+
+                    menu = true;
+
                 }
 
                 int resposta = 0;
@@ -67,7 +71,8 @@ public class Main {
                     String telefoneMorador = leitor.nextLine();
 
                     System.out.println("Digite a renda do morador: ");
-                    Double rendaMorador = leitor.nextDouble();
+                    double rendaMorador = leitor.nextDouble();
+                    leitor.nextLine();
 
                     Morador morador = new Morador(nomeMorador, cpfMorador, telefoneMorador, rendaMorador);
                     imovel.adicionarMorador(morador);
@@ -75,12 +80,14 @@ public class Main {
 
             } else if (opcaoMenu == 2) {
                 System.out.println(imobiliaria);
-            } else {
-
+            } else if (opcaoMenu == 3) {
                 System.out.println("Você saiu do sistema da imobiliária. Volte sempre.");
                 menu = false;
+            } else {
+                System.out.println("O número escolhido não faz parte do menu. Por favor, escolha um número de 1 a 3.");
+                System.out.println();
+                menu = true;
             }
-
 
         }
 

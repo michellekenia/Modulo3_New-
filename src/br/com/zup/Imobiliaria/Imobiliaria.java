@@ -31,7 +31,7 @@ public class Imobiliaria {
     @Override
     public String toString() {
         StringBuilder retorno = new StringBuilder();
-        retorno.append("\n Lista de imóveis :" + listaDeImoveis);
+        retorno.append("\nLista de imóveis :" + listaDeImoveis);
         return retorno.toString();
     }
 }
