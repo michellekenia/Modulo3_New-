@@ -11,6 +11,20 @@ public class Servico_Cliente {
         return email.contains("@");
     }
 
+    public boolean verificarEmailRepetido(String email) {
+
+        boolean repetido = false;
+
+        for (Cliente verificar : listaDeClientes) {
+
+            if (email.equals(verificar.getEmail())) {
+                repetido = true;
+            }
+        }
+
+        return repetido;
+    }
+
     public void cadastrarCliente(String nome, String cpf, String email) throws Exception {
 
         if (validarEmail(email)) {
