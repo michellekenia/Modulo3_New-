@@ -7,9 +7,19 @@ public class Servico_Cliente {
 
     List<Cliente> listaDeClientes = new ArrayList<>();
 
-    public void cadastrarCliente( String nome, String cpf, String email) {
-        Cliente cliente = new Cliente(nome, cpf, email);
-        listaDeClientes.add(cliente);
+    public boolean validarEmail(String email) {
+        return email.contains("@");
     }
+
+    public void cadastrarCliente(String nome, String cpf, String email) throws Exception {
+
+        if (validarEmail(email)) {
+            Cliente cliente = new Cliente(nome, cpf, email);
+            listaDeClientes.add(cliente);
+        } else {
+            throw new Exception("E-mail inválido. Tente novamente");
+        }
+    }
+
 
 }
