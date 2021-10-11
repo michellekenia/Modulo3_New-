@@ -12,4 +12,18 @@ public class Servico_Fatura {
         listaDeFaturas.add(fatura);
     }
 
+    public List<Fatura> faturasCliente(String email) {
+        List<Fatura> faturasCliente = new ArrayList<>();
+
+        for (Fatura fatura : listaDeFaturas) {
+            Cliente clienteDaFatura = fatura.getCliente();
+
+            if (email.equals(clienteDaFatura.getEmail())) {
+                faturasCliente.add(fatura);
+            }
+        }
+
+        return faturasCliente;
+    }
+
 }
