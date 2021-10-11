@@ -28,8 +28,13 @@ public class Servico_Cliente {
     public void cadastrarCliente(String nome, String cpf, String email) throws Exception {
 
         if (validarEmail(email)) {
-            Cliente cliente = new Cliente(nome, cpf, email);
-            listaDeClientes.add(cliente);
+            if (verificarEmailRepetido(email) == false) {
+                Cliente cliente = new Cliente(nome, cpf, email);
+                listaDeClientes.add(cliente);
+            } else {
+                throw new Exception("E-mail já cadastrado. Tente novamente");
+            }
+
         } else {
             throw new Exception("E-mail inválido. Tente novamente");
         }
